@@ -40,6 +40,8 @@ export function convertCompatRouters(childrens: API.RoutersMenuItem[]): MenuData
 
 export async function getRoutersInfo(): Promise<MenuDataItem[]> {
   return getRouters().then((res) => {
+    console.log(res.data,'getRoutersInfo');
+
     return convertCompatRouters(res.data);
   });
 }

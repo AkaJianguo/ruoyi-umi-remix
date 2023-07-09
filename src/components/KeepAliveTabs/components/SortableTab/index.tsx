@@ -1,6 +1,6 @@
 /*
- * @Author: wangYe 
- * @Date: 2020-11-05 18:00:19 
+ * @Author: wangYe
+ * @Date: 2020-11-05 18:00:19
  * @Last Modified by: WhiteShader
  * @Last Modified time: 2022-02-21 11:12:12
  */
@@ -31,6 +31,8 @@ const SortableTab = (props: ITab) => {
     const { active, dispatch, tabWidth, tarnslateX, showTabs, tabsWidth, tabList } = useModel("system");
     const { dropScope } = useAliveController()
     const closable = tabList.length > 1
+    console.log(props,'SortableTab');
+
     return (
         <div
             className={`${styles.tabItem} link-tab ${tabIndex === active ? styles.active : ''}`}
