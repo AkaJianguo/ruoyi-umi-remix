@@ -1,0 +1,108 @@
+@import '~antd/es/style/themes/default.less';
+
+
+@import '~antd/es/style/variable.less';
+//新引入
+@import '~antd/dist/antd.less';
+
+
+
+
+
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+  .ant-layout-header.ant-pro-header-light{
+    background-color: #65ac1e;
+    &.light{
+      background-color: #65ac1e;
+    }
+    .ant-pro-top-nav-header{
+    background-color: #65ac1e;
+    &.light{
+      background-color: #65ac1e;
+      color: #fff;
+    }
+    }
+  }
+  .ant-pro-global-header{
+    background-color: #65ac1e;
+    color: #fff;
+  }
+
+// 侧导航
+.ant-layout-sider{
+  .ant-pro-sider-logo{
+    height: 48px;
+    background-color: #65ac1e;
+  }
+  .ant-menu{
+    .ant-menu-submenu-selected{
+      color: #65ac1e;
+      // background-color: #f8fded;
+      .ant-menu-item-selected{
+      background-color: #f8fded;
+      &::after{
+        border-right: 0;
+      }
+      }
+    }
+  }
+
+}
+
+// ant-menu ant-menu-root ant-menu-inline ant-menu-light ant-pro-sider-menu
+}
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Compatible with IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+@primary-color: #65ac1e;
